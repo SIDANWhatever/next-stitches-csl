@@ -11,6 +11,7 @@ import {
   POSIXTime,
   PaymentPubKeyHash,
   PubKeyHash,
+  PubKeyAddress,
   ScriptAddress,
   Tuple
 } from './type'
@@ -29,6 +30,11 @@ export const maybeStakingHash = (stakeCredential: string): MaybeStakingHash => {
   }
   return conStr0([conStr0([conStr0([builtinByteString(stakeCredential)])])])
 }
+export const pubKeyAddress = (bytes: string, stakeCredential?: string): PubKeyAddress =>
+  conStr0<[ConStr0<[BuiltinByteString]>, MaybeStakingHash]>([
+    conStr0<[BuiltinByteString]>([builtinByteString(bytes)]),
+    maybeStakingHash(stakeCredential || '')
+  ])
 export const scriptAddress = (bytes: string, stakeCredential?: string): ScriptAddress =>
   conStr0<[ConStr1<[BuiltinByteString]>, MaybeStakingHash]>([
     conStr1<[BuiltinByteString]>([builtinByteString(bytes)]),
