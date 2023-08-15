@@ -19,6 +19,7 @@ declare type PlutusData =
   | BuiltinByteString
   | Integer
   | MaybeStakingHash
+  | PubKeyAddress
   | ScriptAddress
   | AssetClass
   | PaymentPubKeyHash
