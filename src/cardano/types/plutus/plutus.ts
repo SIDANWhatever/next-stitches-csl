@@ -28,7 +28,9 @@ export const maybeStakingHash = (stakeCredential: string): MaybeStakingHash => {
   if (stakeCredential === '') {
     return conStr1<[]>([])
   }
-  return conStr0([conStr0([conStr0([builtinByteString(stakeCredential)])])])
+  return conStr0<[ConStr0<[ConStr0<[BuiltinByteString]>]>]>([
+    conStr0<[ConStr0<[BuiltinByteString]>]>([conStr0<[BuiltinByteString]>([builtinByteString(stakeCredential)])])
+  ])
 }
 export const pubKeyAddress = (bytes: string, stakeCredential?: string): PubKeyAddress =>
   conStr0<[ConStr0<[BuiltinByteString]>, MaybeStakingHash]>([
