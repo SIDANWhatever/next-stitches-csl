@@ -28,7 +28,7 @@
 
 ## Cardano Transactions
 
-- All Cardano transactions would be built inside `@src/mesh`, which take `BrowserWallet` and other required information as parameters, and returning a `signedTx`. This design is for pending signed transaction for further checking before sending to the network.
+- All Cardano transactions would be built inside `@src/cardano`, which take `WalletInstance` and other required information as parameters, and returning a `signedTx`. This design is for pending signed transaction for further checking before sending to the network.
 
 # nextjs-boilerplate
 
