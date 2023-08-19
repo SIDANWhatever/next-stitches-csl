@@ -4,10 +4,14 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"],
-      "@test/*": ["test/*"],
-      "@assets/*": ["public/*"],
+      "@styles": ["src/styles"],
       "@styles/*": ["src/styles/*"],
-      "@redux/*": ["src/appRedux/*"]
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["public/*"],
+      "@redux/*": ["src/appRedux/*"],
+      "@test/*": ["test/*"],
+      "@public/*": ["public/*"],
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
